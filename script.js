@@ -32,11 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
         scoreElement.textContent = `Score: ${score}`;
     }
 
-    function generateFood() {
-        const x = Math.floor(Math.random() * gridSize);
-        const y = Math.floor(Math.random() * gridSize);
-        return { x, y };
-    }
+  function generateFood() {
+    let newFood;
+    do {
+        newFood = {
+            x: Math.floor(Math.random() * gridSize),
+            y: Math.floor(Math.random() * gridSize)
+        };
+    } while (snake.some(segment => segment.x === newFood.x && segment.y === newFood.y));
+
+    return newFood;
+}
 
     function checkCollision() {
         const head = snake[0];
