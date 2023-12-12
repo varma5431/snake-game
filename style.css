@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #FF00C5,#0AE2F4);
+
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#game-board {
+    width: 500px;
+    height: 500px;
+    border: 6px solid red;
+    position: relative;
+    background-color: black;
+    margin-top: 20px;
+}
+
+.snake, .food {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.snake {
+    background-color:rgb(10, 244, 24);
+    border-radius: 90%;
+}
+.food {
+    background-color: red;
+    border-radius: 50%; /* Make the food shape circular */
+}
+button {
+    margin-top: 10px;
+ justify-content: center;
+background-color: blue;
+  padding: 8px 8px 8px 8px;
+color: white;
+font-weight: bold;
+border:2px black;
+font-size:large;
+ 
+
+}
+span{
+    margin-top: 10px;
+ justify-content: center;
+background-color: rgb(254, 162, 3);
+  padding: 8px 15px 8px 15px ;
+color: black;
+font-size:x-large;
+font-weight:bold;
+border:2px ;
+border-radius: 80%;
+
+
+
+ 
+
+}
+
